@@ -1,6 +1,6 @@
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import {addTileLayer, validateIp} from "./helpers";
+import {addOffset, addTileLayer, getAddress, validateIp} from "./helpers";
 import icon from './images/icons/icon-location.svg';
 
 const ipInput = document.querySelector(".search-bar__input");
@@ -31,10 +31,7 @@ L.marker([51.505, -0.09], {icon: markerIcon}).addTo(map);
 
 function getLocationByIp() {
    if (validateIp(ipInput.value)) {
-       fetch(
-           `https://geo.ipify.org/api/v2/country,city?apiKey=at_PSx2clyFN6O8duE0ElxWqPuiCgCFc&ipAddress=${ipInput.value}`)
-               .then(response => response.json())
-               .then(setInfo);
+        getAddress(ipInput.value).then(setInfo);
    }
 }
 
@@ -54,4 +51,13 @@ function setInfo(mapData) {
 
     map.setView([lat, lng], 13);
     L.marker([lat, lng], {icon: markerIcon}).addTo(map).bindPopup(`${mapData.ip}`);
+
+    if(matchMedia("max-width: 1023px").matches)
+    {
+        addOffset(map);
+    }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    getAddress('80.92.32.0').then(setInfo);
+});
