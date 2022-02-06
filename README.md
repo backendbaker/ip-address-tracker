@@ -1,6 +1,7 @@
 # Frontend Mentor - IP address tracker solution
 
 This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
 ## Decomposition the task
 
 - Set up a project\.
@@ -12,4 +13,4 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 - Investigate API: [LeafletJS](https://leafletjs.com/)\.
 - Add map into layout\.
 - Implement displaying map on site\.
-- Make layout mobile version\. 
+- Make layout mobile version\.

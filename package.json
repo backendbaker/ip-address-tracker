@@ -4,12 +4,15 @@
   "description": "This is a solution to the IP address tracker challenge on Frontend Mentor frontendmentor.io",
   "scripts": {
     "start": "parcel ./src/index.html --open",
-    "build": "parcel build ./src/index.html --out-dir=build"
+    "build": "parcel build ./src/index.html --dist-dir build",
+    "predeploy": "npm run build",
+    "deploy": "vercel --prod"
   },
   "author": "Pavel (backendbaker@gmail.com)",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.2.1"
+    "parcel": "^2.2.1",
+    "vercel": "^23.1.2"
   },
   "dependencies": {
     "leaflet": "^1.7.1"
