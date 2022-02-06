@@ -24,7 +24,6 @@ const map = L.map(mapArea,
     {
         center: [51.505, -0.09],
         zoom: 13,
-        zoomControl: false,
     });
     
 addTileLayer(map);
@@ -33,7 +32,7 @@ L.marker([51.505, -0.09], {icon: markerIcon}).addTo(map);
 function getLocationByIp() {
    if (validateIp(ipInput.value)) {
        fetch(
-           `https://geo.ipify.org/api/v2/country?apiKey=at_PSx2clyFN6O8duE0ElxWqPuiCgCFc&ipAddress=${ipInput.value}`)
+           `https://geo.ipify.org/api/v2/country,city?apiKey=at_PSx2clyFN6O8duE0ElxWqPuiCgCFc&ipAddress=${ipInput.value}`)
                .then(response => response.json())
                .then(setInfo);
    }
@@ -46,8 +45,13 @@ function handleKey(e) {
 }
 
 function setInfo(mapData) {
+    const {lat, lng, country, region, city, timezone} = mapData.location;
+
     ipInfo.innerText = mapData.ip;
-    locationInfo.innerText = `${mapData.location.country}, ${mapData.location.region}`;
-    timezoneInfo.innerText = mapData.location.timezone;
+    locationInfo.innerText = `${country} ${region} ${city}`;
+    timezoneInfo.innerText = timezone;
     ispInfo.innerHTML = mapData.isp;
+
+    map.setView([lat, lng], 13);
+    L.marker([lat, lng], {icon: markerIcon}).addTo(map).bindPopup(`${mapData.ip}`);
 }

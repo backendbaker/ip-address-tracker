@@ -124,5 +124,5 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 [x] Add a got data to DOM to display info\.
 [x] Investigate API: [LeafletJS](https://leafletjs.com/)\.
 [x] Add map into layout\.
-[] Implement displaying map on site\.
+[x] Implement displaying map on site\.
 [] Make layout mobile version\. 
