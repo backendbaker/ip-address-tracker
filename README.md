@@ -122,7 +122,7 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 [x] Implement a getting data with API\.
 [x] Implement a validation to input IP\.
 [x] Add a got data to DOM to display info\.
-[] Investigate API: [LeafletJS](https://leafletjs.com/)\.
-[] Add map into layout\.
+[x] Investigate API: [LeafletJS](https://leafletjs.com/)\.
+[x] Add map into layout\.
 [] Implement displaying map on site\.
 [] Make layout mobile version\. 

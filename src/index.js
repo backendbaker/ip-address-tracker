@@ -1,4 +1,7 @@
-import {validateIp} from "./helpers";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import {addTileLayer, validateIp} from "./helpers";
+import icon from './images/icons/icon-location.svg';
 
 const ipInput = document.querySelector(".search-bar__input");
 const searchBtn = document.querySelector(".search-bar__btn"); 
@@ -11,6 +14,21 @@ const ispInfo = document.querySelector("#isp");
 searchBtn.addEventListener('click', getLocationByIp);
 ipInput.addEventListener('keydown', handleKey);
 
+const markerIcon = L.icon({
+    iconUrl: icon,
+    iconSize: [30, 40],
+});
+
+const mapArea = document.querySelector(".map");
+const map = L.map(mapArea,
+    {
+        center: [51.505, -0.09],
+        zoom: 13,
+        zoomControl: false,
+    });
+    
+addTileLayer(map);
+L.marker([51.505, -0.09], {icon: markerIcon}).addTo(map);
 
 function getLocationByIp() {
    if (validateIp(ipInput.value)) {
