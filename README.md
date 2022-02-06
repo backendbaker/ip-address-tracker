@@ -116,13 +116,13 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 
 ## Decomposition the task
 
-- Set up a project\.
-- Need to make a header: add an input element and box for display info\.
-- Investigate API: [LeafletJS](https://leafletjs.com/)\.
-- Implement a getting data with API\.
-- Implement a validation to input IP\.
-- Add a got data to DOM to display info\.
-- Investigate API: [IP Geolocation API](https://geo.ipify.org/)\.
-- Add map into layout\.
-- Implement displaying map on site\.
-- Make layout mobile version\. 
+[x] Set up a project\.
+[x] Need to make a header: add an input element and box for display info\.
+[X] Investigate API: [IP Geolocation API](https://geo.ipify.org/)\.
+[x] Implement a getting data with API\.
+[] Implement a validation to input IP\.
+[] Add a got data to DOM to display info\.
+[] Investigate API: [LeafletJS](https://leafletjs.com/)\.
+[] Add map into layout\.
+[] Implement displaying map on site\.
+[] Make layout mobile version\. 
