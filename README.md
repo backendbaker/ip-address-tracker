@@ -121,7 +121,7 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 [X] Investigate API: [IP Geolocation API](https://geo.ipify.org/)\.
 [x] Implement a getting data with API\.
 [x] Implement a validation to input IP\.
-[] Add a got data to DOM to display info\.
+[x] Add a got data to DOM to display info\.
 [] Investigate API: [LeafletJS](https://leafletjs.com/)\.
 [] Add map into layout\.
 [] Implement displaying map on site\.
